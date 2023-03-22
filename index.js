@@ -48,7 +48,7 @@ async function fetchData() {
 
 app.get('/', async (req, res) => {
     const products = await fetchData()
-    res.send('pages/index.ejs', { products });
+    res.render('pages/index.ejs', { products });
 });
 
 app.listen(3000, () => console.log("Server started"))
